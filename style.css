@@ -1,0 +1,125 @@
+@font-face {
+  font-family: "Roboto Mono";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("fonts/roboto-mono-latin-700-normal.woff2") format("woff2");
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: "Roboto Mono", monospace;
+  background: #bfe9ff;
+  color: #1e3a5f;
+  overflow: hidden;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+
+canvas {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  touch-action: none;
+}
+
+.corner {
+  position: fixed;
+  top: 0.5rem;
+  left: 0.5rem;
+  display: flex;
+  gap: 0.4rem;
+  z-index: 2;
+  opacity: 0.6;
+}
+
+.corner:hover,
+.corner:focus-within {
+  opacity: 1;
+}
+
+.corner a,
+.corner button {
+  display: grid;
+  place-items: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  font: inherit;
+  font-size: 1rem;
+  color: #1e3a5f;
+  text-decoration: none;
+  background: rgb(255 255 255 / 70%);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  z-index: 1;
+  text-align: center;
+  background: rgb(191 233 255 / 85%);
+}
+
+.overlay[hidden] {
+  display: none;
+}
+
+.overlay h1 {
+  font-size: clamp(2.2rem, 9vw, 4rem);
+  color: #ec4899;
+  text-shadow: 3px 3px 0 #fff;
+}
+
+.overlay p {
+  font-size: 1.1rem;
+}
+
+.start {
+  padding: 1.2rem 3.5rem;
+  font: inherit;
+  font-size: 2rem;
+  color: #fff;
+  background: #22c55e;
+  border: none;
+  border-radius: 999px;
+  box-shadow: 0 6px 0 #15803d;
+  cursor: pointer;
+}
+
+.start:active {
+  transform: translateY(4px);
+  box-shadow: 0 2px 0 #15803d;
+}
+
+.grownups {
+  max-width: 28rem;
+  font-size: 0.8rem !important;
+  opacity: 0.75;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid #1e3a5f;
+  outline-offset: 2px;
+}

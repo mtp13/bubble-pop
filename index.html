@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png" />
+    <title>Bubble Pop</title>
+  </head>
+  <body>
+    <canvas id="game">Tap the bubbles to pop them.</canvas>
+    <div class="corner">
+      <a
+        class="back"
+        href="https://mike.pullen.dev/"
+        aria-label="Back to mike.pullen.dev"
+        >←</a
+      >
+      <button type="button" id="voice-btn" aria-label="Turn off talking">
+        🗣️
+      </button>
+      <button type="button" id="mute-btn" aria-label="Mute sound">🔊</button>
+    </div>
+    <div id="overlay" class="overlay">
+      <h1>Bubble Pop</h1>
+      <p>Tap the bubbles to free the animals!</p>
+      <button type="button" id="start-btn" class="start">Play</button>
+      <p class="grownups">
+        For ages 1 to 4. There's no way to lose. Grown-ups: the buttons in the
+        corner turn off talking and sound.
+      </p>
+    </div>
+    <script src="game.js"></script>
+  </body>
+</html>
